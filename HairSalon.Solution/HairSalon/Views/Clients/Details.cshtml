@@ -10,6 +10,7 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h4>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist.Name)</h4>
 
+<p>@Html.ActionLink("Edit this client", "Edit", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Return to clients list", "Index")</p>
 <p>@Html.ActionLink("Return to stylists list", "Index", "Stylists")</p>
 <p>@Html.ActionLink("Return to homepage", "Index", "Home")</p>
