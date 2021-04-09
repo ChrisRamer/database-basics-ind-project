@@ -4,21 +4,31 @@
 
 @model HairSalon.Models.Client
 
-<h4>Add a new task</h4>
+<h2 id="title">Add a new client</h2>
+
+<hr />
 
 @using (Html.BeginForm())
 {
 	@Html.LabelFor(model => model.Name)
+	<br>
 	@Html.TextBoxFor(model => model.Name)
-
+	<br>
 	@Html.LabelFor(model => model.Stylist)
+	<br>
 	@Html.DropDownList("StylistId")
-
+	<br><br>
 	@Html.LabelFor(model => model.DateOfLastVisit)
+	<br>
 	<input id="date", name="DateOfLastVisit", type="date">
-
+	<br><br>
 	<input type="submit" value="Add a new client" />
 }
 
-<p>@Html.ActionLink("Show all clients", "Index")</p>
-<p>@Html.ActionLink("Return to homepage", "Index", "Home")</p>
+<hr />
+
+<p>
+	@Html.ActionLink("View all clients", "Index")
+	|
+	@Html.ActionLink("Go to homepage", "Index", "Home")
+</p>
