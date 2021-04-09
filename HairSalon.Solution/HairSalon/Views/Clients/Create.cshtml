@@ -14,6 +14,9 @@
 	@Html.LabelFor(model => model.Stylist)
 	@Html.DropDownList("StylistId")
 
+	@Html.LabelFor(model => model.DateOfLastVisit)
+	<input id="date", name="DateOfLastVisit", type="date">
+
 	<input type="submit" value="Add a new client" />
 }
 

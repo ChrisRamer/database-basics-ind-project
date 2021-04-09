@@ -4,22 +4,31 @@
 
 @model HairSalon.Models.Client
 
-<h2>Edit</h2>
+<h2 id="title">Edit Client</h2>
 
-<h4>Edit this client: @Html.DisplayFor(model => model.Name)</h4>
+<hr />
+
+<h3>Editing client: <b>@Html.DisplayFor(model => model.Name)</b></h3>
 
 @using (Html.BeginForm())
 {
 	@Html.HiddenFor(model => model.ClientId)
 
 	@Html.LabelFor(model => model.Name)
+	<br>
 	@Html.EditorFor(model => model.Name)
-
+	<br>
 	@Html.LabelFor(model => model.Stylist)
+	<br>
 	@Html.DropDownList("StylistId")
-
+	<br><br>
 	<input type="submit" value="Save" />
 }
 
-<p>@Html.ActionLink("Return to list of clients", "Index")</p>
-<p>@Html.ActionLink("Return to homepage", "Index", "Home")</p>
+<hr />
+
+<p>
+	@Html.ActionLink("View all clients", "Index")
+	|
+	@Html.ActionLink("Go to homepage", "Index", "Home")
+</p>
