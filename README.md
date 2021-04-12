@@ -1,6 +1,6 @@
 # *Eau Claire's Salon*
 
-#### *Eau Claire's Salon, 4/9/2021*
+#### *Eau Claire's Salon, 4/12/2021*
 
 #### By **Chris Ramer**
 
@@ -18,7 +18,7 @@ In MySQL Workbench, in *Navigator -> Administration* window, select *Data Import
 
 In *Import Options* select *Import from Self-Contained File*.
 
-Navigate to this repo's `Chris_Ramer.mysql` file.
+Navigate to this repo's `Chris_Ramer.sql` file.
 
 Enter a custom name for this database and click *Ok*.
 
