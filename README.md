@@ -20,7 +20,7 @@ In *Import Options* select *Import from Self-Contained File*.
 
 Navigate to this repo's `Chris_Ramer.sql` file.
 
-Enter a custom name for this database and click *Ok*.
+Enter the name `chris_ramer` for this database and click *Ok*.
 
 Click *Start Import* to import the database.
 
