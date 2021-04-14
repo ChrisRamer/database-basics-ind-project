@@ -8,27 +8,42 @@
 
 <hr />
 
-@using (Html.BeginForm())
+@if(ViewBag.StylistsCount < 1)
 {
-	@Html.LabelFor(model => model.Name)
-	<br>
-	@Html.TextBoxFor(model => model.Name)
-	<br>
-	@Html.LabelFor(model => model.Stylist)
-	<br>
-	@Html.DropDownList("StylistId")
-	<br><br>
-	@Html.LabelFor(model => model.DateOfLastVisit)
-	<br>
-	<input id="date", name="DateOfLastVisit", type="date">
-	<br><br>
-	<input type="submit" value="Add a new client" />
+	<h3>There are no stylists yet. Add a stylist first to add a client to them!</h3>
+
+	<hr />
+
+	<p>
+		@Html.ActionLink("Add a new stylist", "Create", "Stylists")
+		|
+		@Html.ActionLink("Go to homepage", "Index", "Home")
+	</p>
 }
+else
+{
+	@using (Html.BeginForm())
+	{
+		@Html.LabelFor(model => model.Name)
+		<br>
+		@Html.TextBoxFor(model => model.Name)
+		<br>
+		@Html.LabelFor(model => model.Stylist)
+		<br>
+		@Html.DropDownList("StylistId")
+		<br><br>
+		@Html.LabelFor(model => model.DateOfLastVisit)
+		<br>
+		<input id="date", name="DateOfLastVisit", type="date">
+		<br><br>
+		<input type="submit" value="Add a new client" />
+	}
 
-<hr />
+	<hr />
 
-<p>
-	@Html.ActionLink("View all clients", "Index")
-	|
-	@Html.ActionLink("Go to homepage", "Index", "Home")
-</p>
+	<p>
+		@Html.ActionLink("View all clients", "Index")
+		|
+		@Html.ActionLink("Go to homepage", "Index", "Home")
+	</p>
+}
