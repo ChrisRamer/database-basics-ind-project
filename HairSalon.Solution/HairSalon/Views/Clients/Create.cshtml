@@ -26,7 +26,7 @@ else
 	{
 		@Html.LabelFor(model => model.Name)
 		<br>
-		@Html.TextBoxFor(model => model.Name)
+		@Html.TextBoxFor(model => model.Name, new { @required = true, placeholder = "Name for client" })
 		<br>
 		@Html.LabelFor(model => model.Stylist)
 		<br>
@@ -34,7 +34,7 @@ else
 		<br><br>
 		@Html.LabelFor(model => model.DateOfLastVisit)
 		<br>
-		<input id="date", name="DateOfLastVisit", type="date">
+		<input id="date" name="DateOfLastVisit" type="date" value="@string.Format("{0:yyyy-MM-dd}", DateTime.Now)" required>
 		<br><br>
 		<input type="submit" value="Add a new client" />
 	}
